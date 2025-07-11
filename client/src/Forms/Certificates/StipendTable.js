@@ -51,7 +51,7 @@ const StipendTable = () => {
   ];
 
   return (
-    <div className="overflow-x-auto p-4">
+    <div className="mt-16 overflow-x-auto p-4">
       <h2 className="text-xl font-bold mb-4 text-center">
         NIZAM’S INSTITUTE OF MEDICAL SCIENCES, COLLEGE OF ALLIED HEALTH SCIENCES
         <br />

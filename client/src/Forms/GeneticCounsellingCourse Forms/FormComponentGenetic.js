@@ -27,7 +27,8 @@ const FormComponentGenetic = ({
   const totalInWords = toWords(grandTotal).replace(/,/g, ' ').toUpperCase();
 
   return (
-    <Box sx={{ pt: 9, px: 6, pb: 7 }}>
+  <Box sx={{maxwidth:"1000px", mx:"auto", mt:10, p:5, border:"1px solid #ccc" ,color:"black", backgroundColor:"white", boxShadow: 3  }}className = "page-break"> 
+       <Typography variant="h6" gutterBottom></Typography>
  
       <Typography variant="h6" sx={{ mb: 3 }}>
         {title}

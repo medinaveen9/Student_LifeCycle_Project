@@ -29,7 +29,7 @@ const AdministrativeDetails= () => {
   };
   
   return (
-  <Box sx={{ p: 10, border: '1px solid #ccc', borderRadius: 2 }}>
+  <Box sx={{maxWidth: "1000px", mx:"auto", mt:10, p:5, border:"1px solid #ccc",color:"black", backgroundColor:"white", boxShadow: 3 }} className="page-break">
     <Box sx={{ mb: 6 }}>
         <Typography variant="h6" gutterBottom>Advertisement Details</Typography>
         <TextField fullWidth margin="normal" label="Application No." value={adDetails.applicationNo} onChange={(e) => handleAdDetailsChange('applicationNo', e.target.value)} size="small" />

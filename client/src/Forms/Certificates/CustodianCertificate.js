@@ -3,7 +3,7 @@ import React from 'react'
 
 const CustodianCertificate = () => {
   return (
-    <div className="max-w-3xl mx-auto mt-16 p-10 border border-gray-300 text-black bg-white shadow-lg page-break">
+    <div className="max-w-3xl mx-auto mt-20 p-20 border border-gray-300 text-black bg-white shadow-lg page-break">
    
 
       <div className="flex justify-between text-sm font-medium my-3 underline">

@@ -46,7 +46,8 @@ const FormComponent = ({ formTitle, fields, nextRoute,formName }) => {
   };
   
   return (
-    <Box sx={{ p: 14, border: '1px solid #ccc', borderRadius: 2, maxWidth: '1100px', margin: '0 auto' }}>
+    <Box sx={{maxWidth: "1000px", mx:"auto", mt:10, p:5, border:"1px solid #ccc",color:"black", backgroundColor:"white", boxShadow: 3 }} className="page-break">
+ 
       <Typography variant="h6" gutterBottom>{formTitle}</Typography>
 
       <form onSubmit={handleSubmit}>

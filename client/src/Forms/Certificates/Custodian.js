@@ -5,7 +5,7 @@ import Header from '../../components/Header'
 const Custodian = () => {
   return (
     <div className="h-screen bg-white text-black flex justify-center">
-      <div className="max-w-3xl mt-20 mb-20 p-10 border border-gray-300 shadow-lg overflow-auto">
+      <div className="max-w-3xl mt-20 mb-20 p-20 border border-gray-300 shadow-lg overflow-auto">
         <Header />
 
         <div className="flex justify-between text-sm font-medium my-6 underline">

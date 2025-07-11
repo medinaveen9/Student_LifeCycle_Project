@@ -21,7 +21,8 @@ const FormComponent2 = ({ title, subjectsData, idLabel = 'Roll Number' }) => {
   const totalSecuredMarks = subjects.reduce((sum, s) => sum + Number(s.secured || 0), 0);
 
   return (
-    <Box sx={{ pt: 9, px: 6, pb: 7 }}>
+   <Box sx={{maxwidth:"1000px", mx:"auto", mt:10, p:5, border:"1px solid #ccc" ,color:"black", backgroundColor:"white", boxShadow: 3  }}className = "page-break"> 
+        <Typography variant="h6" gutterBottom></Typography>
    
       <Box sx={{ mb: 3, display: 'flex', flexDirection: 'column', gap: 2 }}>
            <Typography variant="h6" sx={{ mb: 3 }}> {title}

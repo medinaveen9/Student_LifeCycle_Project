@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 
 const LossOfPay = () => {
   return (
-    <div className="max-w-3xl mx-auto mt-16 p-10 border border-gray-300 text-black bg-white shadow-lg page-break">
+    <div className="max-w-3xl mx-auto mt-20 p-20 border border-gray-300 text-black bg-white shadow-lg page-break">
 
       <Header />
 

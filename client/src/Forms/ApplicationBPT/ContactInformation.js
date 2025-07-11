@@ -66,7 +66,7 @@ const ContactInformation = () => {
   };
 
   return (
-    <Box sx={{ p: 10, border: '1px solid #ccc', borderRadius: 2 }}>
+   <Box sx={{maxWidth: "1000px", mx:"auto", mt:10, p:5, border:"1px solid #ccc",color:"black", backgroundColor:"white", boxShadow: 3 }} className="page-break">
       <Typography variant="h6" gutterBottom>Correspondence Address</Typography>
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 3 }}>
         {addressFields.filter(f => f.section === 'correspondence').map(({ label, name, section }) => (

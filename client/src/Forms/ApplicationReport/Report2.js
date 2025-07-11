@@ -1,6 +1,20 @@
+
 import React from "react";
-import {Box, Typography, Table,TableHead,TableBody, TableRow,TableCell, Divider,Grid,Card,CardContent,TextField} 
-from "@mui/material";
+import {
+  Box,
+  Typography,
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+  Divider,
+  Grid,
+  Card,
+  CardContent,
+  Paper,
+  TableContainer
+} from "@mui/material";
 
 const Paper2 = () => {
   const subjectMarks = [
@@ -87,7 +101,7 @@ const Paper2 = () => {
   };
 
   return (
-    <Box sx={{ width: "100%", p: { xs: 2, sm: 4, md: 6 }, backgroundColor: "#f9f9f9" }}>
+ <Box sx={{ maxWidth: "1000px", mx: "auto", mt: 10, p: 5, border: "1px solid #ccc", color: "black", backgroundColor: "white", boxShadow: 3 }} className="page-break">
       <Card elevation={3}>
         <CardContent>
           <Typography variant="h5" gutterBottom>
@@ -95,15 +109,18 @@ const Paper2 = () => {
           </Typography>
           <Divider sx={{ mb: 2 }} />
 
-          <Typography variant="h6" gutterBottom>Intermediate Marks</Typography>
+          {/* Intermediate Marks Table */}
+           <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
+                            intermediate Marks
+                             </Typography>
           <Table>
             <TableHead>
               <TableRow>
                 <TableCell>Subject</TableCell>
-                <TableCell>1st Yr Marks</TableCell>
-                <TableCell>1st Yr Max</TableCell>
-                <TableCell>2nd Yr Marks</TableCell>
-                <TableCell>2nd Yr Max</TableCell>
+                <TableCell>1st Year Marks</TableCell>
+                <TableCell>1st Year Max</TableCell>
+                <TableCell>2nd Year Marks</TableCell>
+                <TableCell>2nd Year Max</TableCell>
                 <TableCell>Practical</TableCell>
                 <TableCell>Practical Max</TableCell>
                 <TableCell>Total</TableCell>
@@ -136,98 +153,63 @@ const Paper2 = () => {
 
           <Divider sx={{ my: 3 }} />
 
+          {/* Education History Table */}
           <Typography variant="h6" gutterBottom>
-  Educational History (6th–Inter)
-</Typography>
+            Educational History (6th–Inter)
+          </Typography>
 
-<Grid container spacing={2}>
-  {educationDetails.map((item, index) => (
-    <Grid item xs={12} sm={6} md={4} key={index}>
-      <Card variant="outlined" sx={{ backgroundColor: "#f9f9f9", borderRadius: 2 }}>
-        <CardContent>
-          <Grid container spacing={1}>
-            <Grid item xs={6}>
-              <TextField
-                label="Class"
-                value={item.class}
-                InputProps={{ readOnly: true }}
-                variant="outlined"
-                size="small"
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <TextField
-                label="Year"
-                value={item.year}
-                InputProps={{ readOnly: true }}
-                variant="outlined"
-                size="small"
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                label="College"
-                value={item.college}
-                InputProps={{ readOnly: true }}
-                variant="outlined"
-                size="small"
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <TextField
-                label="Place"
-                value={item.place}
-                InputProps={{ readOnly: true }}
-                variant="outlined"
-                size="small"
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <TextField
-                label="District"
-                value={item.district}
-                InputProps={{ readOnly: true }}
-                variant="outlined"
-                size="small"
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                label="State"
-                value={item.state}
-                InputProps={{ readOnly: true }}
-                variant="outlined"
-                size="small"
-                fullWidth
-              />
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
-    </Grid>
-  ))}
-</Grid>
-
+          <TableContainer component={Paper} sx={{ mb: 3 }}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Class</TableCell>
+                  <TableCell>Year</TableCell>
+                  <TableCell>College</TableCell>
+                  <TableCell>Place</TableCell>
+                  <TableCell>District</TableCell>
+                  <TableCell>State</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {educationDetails.map((item, index) => (
+                  <TableRow key={index}>
+                    <TableCell>{item.class}</TableCell>
+                    <TableCell>{item.year}</TableCell>
+                    <TableCell>{item.college}</TableCell>
+                    <TableCell>{item.place}</TableCell>
+                    <TableCell>{item.district}</TableCell>
+                    <TableCell>{item.state}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
 
           <Divider sx={{ my: 3 }} />
 
-          <Typography variant="h6" gutterBottom>EAPCET Details</Typography>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={4}>
-              <TextField fullWidth label="Registration Number" value={eapcet.regNo} InputProps={{ readOnly: true }} variant="outlined" />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <TextField fullWidth label="Hall Ticket Number" value={eapcet.hallTicket} InputProps={{ readOnly: true }} variant="outlined" />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <TextField fullWidth label="Rank" value={eapcet.rank} InputProps={{ readOnly: true }} variant="outlined" />
-            </Grid>
-          </Grid>
+          {/* EAPCET Details */}
+        <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
+                          EAPCET Details
+                          </Typography>
+
+          <TableContainer component={Paper}>
+            <Table>
+              <TableBody>
+                <TableRow>
+                  <TableCell sx={{ fontWeight: 600, width: "40%" }}>Registration Number</TableCell>
+                  <TableCell>{eapcet.regNo}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell sx={{ fontWeight: 600 }}>Hall Ticket Number</TableCell>
+                  <TableCell>{eapcet.hallTicket}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell sx={{ fontWeight: 600 }}>Rank</TableCell>
+                  <TableCell>{eapcet.rank}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
         </CardContent>
       </Card>
     </Box>
@@ -235,3 +217,5 @@ const Paper2 = () => {
 };
 
 export default Paper2;
+
+

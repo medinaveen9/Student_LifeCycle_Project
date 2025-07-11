@@ -1,5 +1,18 @@
+
 import React from "react";
-import {Card,CardContent,TextField,Grid, Box,Typography, Divider} from "@mui/material";
+import {
+  Card,
+  CardContent,
+  Box,
+  Typography,
+  Divider,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+  Paper,
+} from "@mui/material";
 
 const Report1 = () => {
   const data = {
@@ -24,66 +37,85 @@ const Report1 = () => {
     email: "vaishnavimokthala65@gmai",
     fatherOccupation: "BUSINESS",
     fatherIncome: "25000",
+    motherName: "ARUNA MOKTHALA",
     motherOccupation: "HOUSE WIFE",
     motherIncome: "0",
+    fatherAge: "45",
+    motherAge: "40",
   };
 
   return (
-    <Box
-      sx={{
-        width: "100%",
-        p: { xs: 2, sm: 4, md: 6 },
-        border: "1px solid #ccc",
-        borderRadius: 2,
-        backgroundColor: "#f9f9f9",
-      }}
-    >
-      <Card elevation={3} sx={{ width: "100%" }}>
+   <Box sx={{ maxWidth: "1000px", mx: "auto", mt: 10, p: 5, border: "1px solid #ccc", color: "black", backgroundColor: "white", boxShadow: 3 }} className="page-break">
+
+      <Card elevation={3}>
         <CardContent>
-          <Typography variant="h5" gutterBottom>
-            Bachelor of Physiotherapy - Application Report
+          <Typography variant="h6" align="center" gutterBottom>
+            APPLICATION FORM
+          </Typography>
+          <Typography variant="subtitle1" align="center" gutterBottom>
+            Bachelor of Physiotherapy - 2025
           </Typography>
           <Divider sx={{ mb: 3 }} />
 
-          <Grid container spacing={2}>
-            {[
-              { label: "Application No", value: data.applicationNo },
-              { label: "Course", value: `${data.courseCode} - ${data.courseName}` },
-              { label: "Applicant Name", value: data.applicantName },
-              { label: "Father's Name", value: data.fatherName },
-              { label: "Date of Birth", value: data.dob },
-              { label: "Age", value: data.age },
-              { label: "Gender", value: data.gender },
-              { label: "Marital Status", value: data.maritalStatus },
-              { label: "Social Status", value: data.socialStatus },
-              { label: "Nationality", value: data.nationality },
-              { label: "Place of Birth", value: data.placeOfBirth },
-              { label: "Differently Abled", value: data.differentlyAbled },
-              { label: "Identification Mark 1", value: data.idMark1 },
-              { label: "Identification Mark 2", value: data.idMark2 },
-              { label: "Aadhar No", value: data.aadhar },
-              { label: "Email", value: data.email },
-              { label: "Father's Occupation", value: data.fatherOccupation },
-              { label: "Father's Income", value: `₹${data.fatherIncome}` },
-              { label: "Mother's Occupation", value: data.motherOccupation },
-              { label: "Mother's Income", value: `₹${data.motherIncome}` },
-            ].map((item, index) => (
-              <Grid item xs={12} md={6} key={index}>
-                <TextField
-                  fullWidth
-                  label={item.label}
-                  value={item.value}
-                  InputProps={{ readOnly: true }}
-                  variant="outlined"
-                  size="small"
-                />
-              </Grid>
-            ))}
-          </Grid>
+          <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
+            Applicant Details
+          </Typography>
+
+          <TableContainer component={Paper} sx={{ mb: 4 }}>
+            <Table>
+              <TableBody>
+                <Row label="Application No" value={data.applicationNo} />
+                <Row label="Course" value={`${data.courseCode} - ${data.courseName}`} />
+                <Row label="Applicant Name" value={data.applicantName} />
+                <Row label="Father's Name" value={data.fatherName} />
+                <Row label="Age (As on last date)" value={data.age} />
+                <Row label="Date of Birth" value={data.dob} />
+                <Row label="Place of Birth" value={data.placeOfBirth} />
+                <Row label="Social Status" value={data.socialStatus} />
+                <Row label="Nationality" value={data.nationality} />
+                <Row label="Marital Status" value={data.maritalStatus} />
+                <Row label="Gender" value={data.gender} />
+                <Row label="Differently Abled" value={data.differentlyAbled} />
+                <Row label="Identification Mark 1" value={data.idMark1} />
+                <Row label="Identification Mark 2" value={data.idMark2} />
+                <Row label="University Area" value={data.localArea} />
+                <Row label="In-service (Govt.)" value={data.inService} />
+                <Row label="Aadhar No" value={data.aadhar} />
+                <Row label="Father's Email" value={data.email} />
+              </TableBody>
+            </Table>
+          </TableContainer>
+
+          <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
+            Detail of Parents / Spouse
+          </Typography>
+
+          <TableContainer component={Paper}>
+            <Table>
+              <TableBody>
+                <Row label="Father's Name" value={data.fatherName} />
+                <Row label="Father's Age" value={`${data.fatherAge} Years`} />
+                <Row label="Father's Occupation" value={data.fatherOccupation} />
+                <Row label="Father's Income" value={`₹${data.fatherIncome}`} />
+                <Row label="Mother's Name" value={data.motherName} />
+                <Row label="Mother's Age" value={`${data.motherAge} Years`} />
+                <Row label="Mother's Occupation" value={data.motherOccupation} />
+                <Row label="Mother's Income" value={`₹${data.motherIncome}`} />
+              </TableBody>
+            </Table>
+          </TableContainer>
         </CardContent>
       </Card>
     </Box>
   );
 };
+
+// Reusable row component
+const Row = ({ label, value }) => (
+  <TableRow>
+    <TableCell sx={{ fontWeight: 600, width: "40%" }}>{label}</TableCell>
+    <TableCell>{value}</TableCell>
+  </TableRow>
+);
 
 export default Report1;

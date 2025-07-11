@@ -28,7 +28,7 @@ const StipendForm = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-4xl mx-auto mt-10 p-8 bg-white shadow-lg rounded-3xl border border-gray-200"
+      className="max-w-4xl mx-auto mt-20 p-8 bg-white shadow-lg rounded-3xl border border-gray-200"
     >
       <h2 className="text-3xl font-bold text-center mb-8 text-blue-700">
         Enter Stipend Data
