@@ -60,7 +60,7 @@ const [year,setYear]=useState('');
       </Box>
       <Typography><strong>{idLabel}:</strong> {subjectid}</Typography>
       <Typography><strong>Name:</strong> {name}</Typography>
-      <Typography><strong>S/o. / D/o.:</strong> {soName}</Typography>
+      <Typography><strong>S/o or D/o:</strong> {soName}</Typography>
       <Typography><strong>Month & Year of Exam:</strong> {examDate}</Typography>
       <TableContainer component={Paper} sx={{ mt: 3 }}>
         <Table>

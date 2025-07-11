@@ -55,9 +55,9 @@ const FormComponentMLT = ({ title, studentInfo = {}, subjectsData = [] }) => {
       </Box>
 
       <Box mt={3}>
-        <Typography><strong>Roll Number:</strong> {rollNumber || '-'}</Typography>
-        <Typography><strong>Name:</strong> {name || '-'}</Typography>
-        <Typography><strong>S/o or D/o:</strong> {soName || '-'}</Typography>
+        <Typography><strong>Roll Number:</strong> {rollNumber || ''}</Typography>
+        <Typography><strong>Name:</strong> {name || ''}</Typography>
+        <Typography><strong>S/o or D/o:</strong> {soName || ''}</Typography>
         <Typography><strong>Date:</strong> {formattedDate}</Typography>
       </Box>
 

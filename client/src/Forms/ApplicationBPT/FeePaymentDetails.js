@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import {Typography,TextField, Box,Button} from '@mui/material';
 
-const ApplicationFeeDetails = () => {
+const FeePaymentDetails = () => {
   const navigate = useNavigate();
   const [paymentData, setPaymentData] = useState({
     applicationNumber:'',
@@ -95,4 +95,4 @@ const ApplicationFeeDetails = () => {
   );
 };
 
-export default ApplicationFeeDetails;
+export default  FeePaymentDetails ;

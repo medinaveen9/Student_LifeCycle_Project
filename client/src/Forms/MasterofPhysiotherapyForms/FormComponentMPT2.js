@@ -63,7 +63,7 @@ const FormComponentMPT2 = ({ rollNumber, name, sod, examDate, subjectsData, spec
         </Typography>
         <Typography><strong>Specialty:</strong> {specialty}</Typography>
         <Typography><strong>Name:</strong> {name}</Typography>
-        <Typography><strong>D/o. S/o.:</strong> {sod}</Typography>
+        <Typography><strong>D/o or S/o:</strong> {sod}</Typography>
       </Box>
 
       <TableContainer component={Paper} sx={{ mb: 2 }}>

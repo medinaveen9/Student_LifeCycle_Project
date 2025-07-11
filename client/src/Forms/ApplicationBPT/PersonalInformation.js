@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box,TextField,  FormControl, Select,  MenuItem, InputLabel, Typography, Button} from '@mui/material';
 
-const PersonalDetails = () => {
+const PersonalInformation = () => {
 const navigate = useNavigate();
 
   const [adDetails, setAdDetails] = useState({
@@ -118,4 +118,4 @@ const navigate = useNavigate();
   );
 };
 
-export default PersonalDetails;
+export default PersonalInformation;

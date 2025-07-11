@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom'; 
 
-const CourseDetails = () => {
+const CourseSelection = () => {
   const navigate = useNavigate(); 
 
   const [courseSubjects, setCourseSubjects] = useState([
@@ -140,4 +140,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default CourseSelection ;

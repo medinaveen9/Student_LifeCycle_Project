@@ -16,13 +16,13 @@ const Sidebar = () => {
       hasSubMenu: true,
       subItems: [
        
-        {id:'AdministrativeDetails' ,label:'Administrative Information', path:'/ap1' },
-        {id:'ApplicationFeeDetails' ,label:'Fee Payment Details', path:'/appfee' },
-        {id:'PersonalDetails' ,label:'Personal Information', path:'/personaldetails' },
-        {id:'IdentityDetails' ,label:'Identity Verification', path:'/identitydetails' },
-        {id:'ContactInformation' ,label:'Contact Details', path:'/contact' },
+        {id:'AdministrativeInformation' ,label:'Administrative Information', path:'/administrative' },
+        {id:'FeePaymentDetails' ,label:'Fee Payment Details', path:'/appfee' },
+        {id:'PersonalInformation' ,label:'Personal Information', path:'/personalinfo' },
+        {id:'IdentityVerification' ,label:'Identity Verification', path:'/identityverify' },
+        {id:'ContactDetails' ,label:'Contact Details', path:'/contact' },
         {id:'IntermediateDetails' ,label:'Educational Background-Intermediate Level', path:'/inter' },
-        {id:'CourseDetails' ,label:'Course selection', path:'/coursedetails' },
+        {id:'CourseSelection' ,label:'Course Selection', path:'/course' },
         {id:'AcademicRecord' ,label:'Academic Record', path:'/academicrecord' }, 
         {id:'DocumentsUpload' ,label:'Documents Upload', path:'/upload' },
      
@@ -35,9 +35,9 @@ const Sidebar = () => {
       hasSubMenu: true,
       subItems: [
      
-        { id: 'Report1', label: 'Personal & Academic Info', path: '/report1' },
-        { id: 'Report2', label: 'Course & Details', path: '/report2' },
-        { id: 'Report3', label: 'Uploaded Documents', path: '/report3' },   
+        { id: 'Personal&AcademicInfo', label: 'Personal & Academic Info', path: '/academicinfo' },
+        { id: 'Course & Details', label: 'Course & Details', path: '/coursedetails' },
+        { id: 'Uploaded Documents', label: 'Uploaded Documents', path: '/uploads' },   
 
       ]
     },
@@ -78,13 +78,6 @@ const Sidebar = () => {
         {id:'ProvisionalAdmission', label:'Provisional Admission', path:'/proadmission'},
         {id:'StipendForm', label:'Stipend Form', path:'/stipendform'},
         {id:'StipendTable', label:'Stipend Table', path:'/stipendtable'},
-        
-    
-      
-    
-   
-     
-    
      
       ]
     },
@@ -148,7 +141,7 @@ const Sidebar = () => {
       subItems: [
    
         { id: 'MLTSecondYear', label: 'MLT SecondYear', path: '/mlt2' },
-        { id: 'MLTThirdYear', label: 'MLT hirdYear', path: '/mlt3' },
+        { id: 'MLTThirdYear', label: 'MLT ThirdYear', path: '/mlt3' },
       ]
     },
   

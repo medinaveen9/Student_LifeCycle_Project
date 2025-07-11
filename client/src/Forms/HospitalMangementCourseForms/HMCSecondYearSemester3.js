@@ -43,7 +43,7 @@ const HMCFirstYearSemester3 = () => {
 
   return (
     <FormComponentHMC
-      title="Hospital Management course Second Year Semester 3 Marks Memo"
+      title="Hospital Management Course Second Year Semester 3 Marks Memo"
       subjectsData={subjectsData}
       studentInfo={studentInfo}
     />

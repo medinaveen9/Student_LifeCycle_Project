@@ -4,7 +4,7 @@ import { TextField, Button, Table,TableBody,TableCell,TableContainer,TableHead,T
 
 const FormComponentAnesthesia2 = ({ title, studentInfo = {}, subjectsData = [] }) => {
   const { name, soName, date } = studentInfo;
-  const formattedDate = date ? new Date(date).toLocaleDateString() : '-';
+  const formattedDate = date ? new Date(date).toLocaleDateString() : '';
 
   const [rollNumber, setRollNumber] = useState('');
   const [course, setCourse] = useState('');
@@ -36,9 +36,9 @@ const FormComponentAnesthesia2 = ({ title, studentInfo = {}, subjectsData = [] }
       </Box>
 
       <Box mt={3}>
-        <Typography><strong>Roll Number:</strong> {rollNumber || '-'}</Typography>
-        <Typography><strong>Name:</strong> {name || '-'}</Typography>
-        <Typography><strong>S/o or D/o:</strong> {soName || '-'}</Typography>
+        <Typography><strong>Roll Number:</strong> {rollNumber || ''}</Typography>
+        <Typography><strong>Name:</strong> {name || ''}</Typography>
+        <Typography><strong>S/o or D/o:</strong> {soName || ''}</Typography>
         <Typography><strong>Date:</strong> {formattedDate}</Typography>
       </Box>
 

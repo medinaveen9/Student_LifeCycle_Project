@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
-const AdministrativeDetails= () => {
+const AdministrativeInformation= () => {
   const [adDetails, setAdDetails] = useState({
     adNo: '',
     adDate: '',
@@ -59,7 +59,7 @@ const AdministrativeDetails= () => {
   );
 };
 
-export default AdministrativeDetails;
+export default AdministrativeInformation;
           
 
 

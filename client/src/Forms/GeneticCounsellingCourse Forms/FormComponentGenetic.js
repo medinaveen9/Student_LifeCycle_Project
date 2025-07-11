@@ -65,7 +65,7 @@ const FormComponentGenetic = ({
      
      
         <Typography><strong>Name:</strong> {name}</Typography>
-        <Typography><strong>S/O./D/O:</strong> {sod}</Typography>
+        <Typography><strong>S/o or D/O:</strong> {sod}</Typography>
       </Box>
 
       <TableContainer component={Paper}>

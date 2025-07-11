@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const Application1 = () => {
+const IdentityVerification= () => {
   const navigate = useNavigate();
 
   const [adDetails, setAdDetails] = useState({
@@ -76,4 +76,4 @@ const Application1 = () => {
   );
 };
 
-export default Application1;
+export default IdentityVerification;

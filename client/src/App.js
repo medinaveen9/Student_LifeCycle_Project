@@ -38,22 +38,23 @@ import NMTSecondYear from './Forms/NuclearMedicineTechnologyForms/NMTSecondYear'
 import GeneticCounsellingCourse from './Forms/GeneticCounsellingCourse Forms/GeneticCounsellingCourse';
 
 
-import ApplicationFeeDetails from './Forms/ApplicationBPT/ApplicationFeeDetails';
-import PersonalDetails from './Forms/ApplicationBPT/PersonalDetails';
-import IdentityDetails from './Forms/ApplicationBPT/IdentityDetails'
+import FeePaymentDetails from './Forms/ApplicationBPT/FeePaymentDetails';
+import PersonalInformation from './Forms/ApplicationBPT/PersonalInformation';
+import IdentityVerification from './Forms/ApplicationBPT/IdentityVerification'
 import IntermediateDetails from './Forms/ApplicationBPT/IntermediateDetails';
 import AcademicRecord from './Forms/ApplicationBPT/AcademicRecord';
-import Application1 from './Forms/ApplicationBPT/AdministrativeDetails';
-import CourseDetails from './Forms/ApplicationBPT/CourseDetails';
+import AdministrativeInformation from './Forms/ApplicationBPT/AdministrativeInformation';
+import CourseSelection from './Forms/ApplicationBPT/CourseSelection';
+import ContactDetails from './Forms/ApplicationBPT/ContactDetails';
 import OnBoardingPhase from './Forms/ApplicalPgMedicalStudents/OnBoardingPhase'
-import ContactInformation from './Forms/ApplicationBPT/ContactInformation';
 import DocumentsUpload from './Forms/ApplicationBPT/DocumentsUpload';
 
 import PreAdmission from './Forms/ApplicalPgMedicalStudents/PreAdmission'
 import ExaminationAssessment from './Forms/ApplicalPgMedicalStudents/ExaminationAssessment';
-import Report1 from './Forms/ApplicationReport/Report1';
-import Report2 from './Forms/ApplicationReport/Report2';
-import Report3 from './Forms/ApplicationReport/Report3';
+
+import PersonalAcademicInfo from './Forms/ApplicationReport/PersonalAcademicInfo';
+import CourseDetails from './Forms/ApplicationReport/CourseDetails';
+import Uploads from './Forms/ApplicationReport/Uploads';
 
 import Attendance_Certificate from './Forms/Certificates/Attendence_Certificate';
 import Custodian from './Forms/Certificates/Custodian';
@@ -67,6 +68,9 @@ import ObserverPermission from './Forms/Certificates/ObserverPermission';
 import ProvisionalAdmission from './Forms/Certificates/ProvisionalAdmission';
 import StipendForm from './Forms/Certificates/StipendForm';
 import StipendTable from './Forms/Certificates/StipendTable';
+
+
+
 
 
 const App = () => {
@@ -125,19 +129,20 @@ const App = () => {
           <Route path="/onboard" element={<OnBoardingPhase/>} />
           <Route path='/exam' element={<ExaminationAssessment/>} />
       
-          <Route path="/ap1" element={<Application1/>}/>
+          <Route path="/administrative" element={<AdministrativeInformation/>}/>
           <Route path="/inter" element={<IntermediateDetails/>}/>
           <Route path="/academicrecord" element={<AcademicRecord/>}/>
-          <Route path="/contact" element={ <ContactInformation/>}/>
+          <Route path="/contact" element={ <ContactDetails/>}/>
           <Route path="/upload" element={<DocumentsUpload/>}/>
 
-          <Route path ="/appfee" element={<ApplicationFeeDetails/>} /> 
-          <Route path ="/personaldetails" element={<PersonalDetails/>} /> 
-          <Route path ="/identitydetails" element={<IdentityDetails/>} /> 
-          <Route path ="/coursedetails" element={<CourseDetails/>} /> 
-          <Route path="/report1" element={<Report1/> } />
-          <Route path="/report2" element={<Report2/> } />
-          <Route path="/report3" element={<Report3/> } />
+          <Route path ="/appfee" element={<FeePaymentDetails/>} /> 
+          <Route path ="/personalinfo" element={<PersonalInformation/>} /> 
+          <Route path ="/identityverify" element={<IdentityVerification/>} /> 
+          <Route path ="/course" element={<CourseSelection/>} /> 
+
+          <Route path="/academicinfo" element={<PersonalAcademicInfo/> } />
+          <Route path="/coursedetails" element={<CourseDetails/> } />
+          <Route path="/uploads" element={<Uploads/> } />
 
           <Route path ="/attendancecertificate" element={<Attendance_Certificate/>} />
            <Route path ="/custodian" element={<Custodian/>} />

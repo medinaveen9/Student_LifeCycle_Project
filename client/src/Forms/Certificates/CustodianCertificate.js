@@ -1,11 +1,12 @@
 
 import React from 'react'
+import Header from '../../components/Header'
 
 const CustodianCertificate = () => {
   return (
     <div className="max-w-3xl mx-auto mt-20 p-20 border border-gray-300 text-black bg-white shadow-lg page-break">
    
-
+<Header/>
       <div className="flex justify-between text-sm font-medium my-3 underline">
         <p>File No. AC1/28596/2020/MD(Anaes)</p>
         <p>Date:07.07.2025</p>

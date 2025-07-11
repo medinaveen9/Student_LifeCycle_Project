@@ -74,7 +74,7 @@ const FormComponentNMT = ({
           <strong>Name:</strong> {name}
         </Typography>
         <Typography>
-          <strong>S/O./D/O:</strong> {parentName}
+          <strong>S/o or /D/O:</strong> {parentName}
         </Typography>
         <Typography>
           <strong>Exam Date:</strong> {examDate}

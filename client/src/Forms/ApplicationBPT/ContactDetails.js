@@ -3,7 +3,7 @@ import { Box, Typography, TextField, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 
-const ContactInformation = () => {
+const ContactDetails = () => {
   const [formData, setFormData] = useState({
     correspondence: { address: '', country: '', state: '', district: '', pinCode: '', mobile: '', email: '' },
     permanent: { address: '', country: '', state: '', district: '', pinCode: '', mobile: '', email: '', fatherEmail: '' },
@@ -131,4 +131,4 @@ const ContactInformation = () => {
   );
 };
 
-export default ContactInformation;
+export default ContactDetails;

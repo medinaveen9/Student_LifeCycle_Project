@@ -1,24 +1,8 @@
-
 import React from "react";
-import {
-  Box,
-  Typography,
-  Divider,
-  Card,
-  CardContent,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-  Paper,
-  List,
-  ListItem,
-  ListItemText,
-  Grid,
-} from "@mui/material";
+import {Box, Typography, Divider,Card,CardContent,  Table, TableBody,  TableCell,TableContainer,TableRow,Paper,  List,
+  ListItem,ListItemText,Grid,} from "@mui/material";
 
-const Paper3 = () => {
+const Uploads = () => {
   const address = {
     addressLine: "HNO 7-29/1A, Gandhi Nagar Colony, Amangal Village and Mandal",
     country: "India",
@@ -78,7 +62,6 @@ const Paper3 = () => {
             </Table>
           </TableContainer>
 
-          {/* Payment Section */}
            <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
                    Payment Details
                     </Typography>
@@ -94,7 +77,7 @@ const Paper3 = () => {
             </Table>
           </TableContainer>
 
-          {/* Documents Section */}
+     
            <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
                     Uploaded Documents
                     </Typography>
@@ -108,7 +91,7 @@ const Paper3 = () => {
 
           <Divider sx={{ my: 3 }} />
 
-          {/* Declaration Section */}
+      
           <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
                    Declaration
                     </Typography>
@@ -133,7 +116,6 @@ const Paper3 = () => {
   );
 };
 
-// Reusable row component for tables
 const Row = ({ label, value }) => (
   <TableRow>
     <TableCell sx={{ fontWeight: 600, width: '35%' }}>{label}</TableCell>
@@ -141,4 +123,4 @@ const Row = ({ label, value }) => (
   </TableRow>
 );
 
-export default Paper3;
+export default Uploads;

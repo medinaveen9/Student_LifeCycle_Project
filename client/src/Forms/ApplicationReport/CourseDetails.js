@@ -1,22 +1,8 @@
-
 import React from "react";
-import {
-  Box,
-  Typography,
-  Table,
-  TableHead,
-  TableBody,
-  TableRow,
-  TableCell,
-  Divider,
-  Grid,
-  Card,
-  CardContent,
-  Paper,
-  TableContainer
-} from "@mui/material";
+import {Box,  Typography, Table, TableHead, TableBody,TableRow,TableCell,  Divider,Grid, Card,
+  CardContent,  Paper, TableContainer} from "@mui/material";
 
-const Paper2 = () => {
+const  CourseDetails = () => {
   const subjectMarks = [
     { subject: "Botany", t1: 59, t1Max: 60, t2: 51, t2Max: 60, practical: 30, practicalMax: 30, total: 140, totalMax: 150 },
     { subject: "Zoology", t1: 57, t1Max: 60, t2: 54, t2Max: 60, practical: 30, practicalMax: 30, total: 141, totalMax: 150 },
@@ -109,7 +95,7 @@ const Paper2 = () => {
           </Typography>
           <Divider sx={{ mb: 2 }} />
 
-          {/* Intermediate Marks Table */}
+  
            <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
                             intermediate Marks
                              </Typography>
@@ -153,7 +139,6 @@ const Paper2 = () => {
 
           <Divider sx={{ my: 3 }} />
 
-          {/* Education History Table */}
           <Typography variant="h6" gutterBottom>
             Educational History (6th–Inter)
           </Typography>
@@ -187,11 +172,9 @@ const Paper2 = () => {
 
           <Divider sx={{ my: 3 }} />
 
-          {/* EAPCET Details */}
         <Typography variant="subtitle1" sx={{ fontWeight: "bold",fontSize: "1.4rem", mb: 2 }}>
                           EAPCET Details
                           </Typography>
-
           <TableContainer component={Paper}>
             <Table>
               <TableBody>
@@ -216,6 +199,6 @@ const Paper2 = () => {
   );
 };
 
-export default Paper2;
+export default CourseDetails;
 
 

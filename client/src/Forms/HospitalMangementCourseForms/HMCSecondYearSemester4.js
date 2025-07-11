@@ -9,7 +9,7 @@ const subjectsData = [
     theorySecured: 48,
     practicalMax: 20,
     practicalSecured: 18,
-    result: 'Pass' // Added quotes around 'Pass'
+    result: 'Pass' 
   },
   {
     subject: 'Total Quality Management',
@@ -43,7 +43,7 @@ const HMCFirstYearSemester4 = () => {
 
   return (
     <FormComponentHMC
-       title="Hospital Management course SecondYear Semester 4 Marks Memo"
+       title="Hospital Management Course SecondYear Semester 4 Marks Memo"
       subjectsData={subjectsData}
       studentInfo={studentInfo}
     />

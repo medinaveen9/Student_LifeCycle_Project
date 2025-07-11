@@ -55,7 +55,7 @@ const FormComponentMPT = ({ title, subjectsData = [], idLabel = 'Roll Number' })
 
       <Typography><strong>{idLabel}:</strong> {rollNumber}</Typography>
       <Typography><strong>Name:</strong> {name}</Typography>
-      <Typography><strong>S/o. / D/o.:</strong> {sod}</Typography>
+      <Typography><strong>S/o or D/o:</strong> {sod}</Typography>
       <Typography><strong>Month & Year of Exam:</strong> {examDate}</Typography>
 
       <TableContainer component={Paper} sx={{ mt: 3 }}>
